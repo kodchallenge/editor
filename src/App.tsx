@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import KodButton from './components/button/KodButton'
+import KodLayout from './layouts/KodLayout'
 
 function App() {
 
   return (
     <div className="App">
-        <KodButton>Run</KodButton>
+      <KodLayout />
     </div>
   )
 }
