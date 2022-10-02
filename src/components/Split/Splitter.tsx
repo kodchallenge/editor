@@ -7,7 +7,7 @@ export type SplitterProps = {
 }
 const Splitter: React.FC<SplitterProps & React.HTMLAttributes<HTMLDivElement>> = ({ ...props }) => {
     const {children, text, dir, ...divProps} = props
-    
+
     return (
         <div 
             {...divProps}

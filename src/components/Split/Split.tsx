@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import React from "react";
+import React, { useState } from "react";
 import SplitPane from "./SplitPane";
 import Splitter from "./Splitter";
 
@@ -18,11 +18,14 @@ export type SplitProps = {
 const Split: React.FC<SplitProps & React.HTMLAttributes<HTMLDivElement>> = ({ ...props }) => {
     const { children, dir, sizes, ...otherProps } = props
     const count = React.Children.count(children)
+    
+    const [paneSizes, setPaneSizes] = useState<number[]>(sizes ?? Array.from({length: count}, () => 100 / count))
+
     return (
         <div css={wrapperStyle({ dir })} {...otherProps}>
             {React.Children.map(children, (child, index) => (
                 <>
-                    <SplitPane basis={(sizes?.at(index) ?? 100 / count) + "%"}>
+                    <SplitPane basis={paneSizes?.at(index) + "%"}>
                         {child}
                     </SplitPane>
                     {index < count - 1 && <Splitter dir={dir} />}
