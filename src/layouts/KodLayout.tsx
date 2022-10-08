@@ -24,6 +24,7 @@ const KodLayout = () => {
 									</div>
 								</Split>
 							</div>
+							<div />
 						</Split>
 					</div>
 				</div>
