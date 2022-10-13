@@ -1,4 +1,7 @@
-import Split from '@/components/Split/Split'
+// import Split from '@/components/Split/Split'
+
+import KodEditor from "@/components/editor/KodEditor"
+import Split from "react-split"
 
 const KodLayout = () => {
 	return (
@@ -7,7 +10,34 @@ const KodLayout = () => {
 				<header className='header'>Header</header>
 				<div className='editor-body'>
 					<div className='wrapper'>
-						<Split dir='vertical'>
+						<Split
+							className="editor-split split"
+							gutterSize={6}
+							minSize={0}
+							snapOffset={200}
+						>
+							<div className='split-pane problem-root'>
+								<div className='problem-body'>
+									<div className='problem-content'>
+										asdasd
+									</div>
+								</div>
+							</div>
+							<div className='split-pane editor-root'>
+								<Split
+									direction="vertical"
+									sizes={[60, 40]}
+									gutterSize={6}
+									snapOffset={0}
+									className="split"
+								>
+									<KodEditor />
+									<div className='console-body'> asd asdas asd as das das dasd as
+									</div>
+								</Split>
+							</div>
+						</Split>
+						{/* <Split dir='vertical'>
 							<div className='split-pane problem-root'>
 								<div className='problem-body'>
 									<div className='problem-content'>
@@ -25,7 +55,7 @@ const KodLayout = () => {
 								</Split>
 							</div>
 							<div />
-						</Split>
+						</Split> */}
 					</div>
 				</div>
 			</div>
