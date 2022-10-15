@@ -1,6 +1,7 @@
 // import Split from '@/components/Split/Split'
 
 import KodEditor from "@/components/editor/KodEditor"
+import InformationPage from "@/components/Pages/InformationPage"
 import Split from "react-split"
 
 const KodLayout = () => {
@@ -17,11 +18,12 @@ const KodLayout = () => {
 							snapOffset={200}
 						>
 							<div className='split-pane problem-root'>
-								<div className='problem-body'>
+								<InformationPage />
+								{/* <div className='problem-body'>
 									<div className='problem-content'>
 										asdasd
 									</div>
-								</div>
+								</div> */}
 							</div>
 							<div className='split-pane editor-root'>
 								<Split
