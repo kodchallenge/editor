@@ -1,5 +1,8 @@
 @import "theme.scss";
 
+:root {
+    color: $body-text;
+}
 
 .root {
     width: 100%;
@@ -14,8 +17,7 @@
     }
 
     .header {
-        background-color: $dark;
-        color: #fff;
+        background-color: $primary;
         height: 50px;
         box-shadow: 0px 1px 3px 0px #36363650;
         display: flex;
@@ -46,7 +48,7 @@
     }
 
     .gutter {
-        background-color: rgb(126, 126, 126);
+        background-color: rgb(255 255 255 / 10%);
         background-repeat: no-repeat;
         background-position: 50%;
     }

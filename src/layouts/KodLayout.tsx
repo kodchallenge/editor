@@ -13,7 +13,7 @@ const KodLayout = () => {
 					<div className='wrapper'>
 						<Split
 							className="editor-split split"
-							gutterSize={6}
+							gutterSize={3}
 							minSize={0}
 							snapOffset={200}
 						>
@@ -29,7 +29,7 @@ const KodLayout = () => {
 								<Split
 									direction="vertical"
 									sizes={[60, 40]}
-									gutterSize={6}
+									gutterSize={3}
 									snapOffset={0}
 									className="split"
 								>
