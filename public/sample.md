@@ -17,7 +17,7 @@ const other = arr.map((v, i) => v * 2 + v**2)
 console.log(other)
 ```
 
-[Link Tıkla](https://github.com)
+[Link Tıkla](#)
 
 ## 1. Implement the calculator operations
 

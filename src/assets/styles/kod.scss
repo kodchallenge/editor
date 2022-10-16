@@ -122,4 +122,24 @@
         overflow: auto;
         border-radius: 0.3em;
     }
+
+    a {
+        color: #448fff;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    hr {
+        border-color: #ffffff40;
+    }
+
+    h1 {
+        border-bottom: 2px solid #ffffff40;
+    }
 }
