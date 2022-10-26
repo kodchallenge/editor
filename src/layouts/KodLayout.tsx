@@ -18,7 +18,7 @@ const KodLayout = () => {
 							snapOffset={200}
 						>
 							<div className='split-pane problem-root'>
-								<InformationPage />
+								{/* <InformationPage /> */}
 								{/* <div className='problem-body'>
 									<div className='problem-content'>
 										asdasd
@@ -65,4 +65,4 @@ const KodLayout = () => {
 	)
 }
 
-export default KodLayout
+// export default KodLayout

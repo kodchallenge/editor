@@ -2,11 +2,12 @@ import React from 'react'
 import MonacoEditor from "@monaco-editor/react";
 import { editor } from "monaco-editor";
 import { OneDark } from './themes/OneDark';
+import KodLayout from 'kod-layout'
 
 const KodEditor = () => {
 
     return (
-        <div className='editor'>
+        <KodLayout.Tab className='editor'>
             <MonacoEditor
                 // height={height}
                 language={"javascript"}
@@ -19,7 +20,7 @@ const KodEditor = () => {
                 //     editorRef.current = editor
                 // }}
             />
-        </div>
+        </KodLayout.Tab>
     )
 }
 

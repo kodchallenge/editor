@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import KodButton from './components/button/KodButton'
-import KodLayout from './layouts/KodLayout'
+import TwoColumnLayout from './layouts/TwoColumnLayout'
+import '../node_modules/kod-markdown/dist/style.css'
 
 function App() {
 
   return (
     <div className="App">
-      <KodLayout />
+      <TwoColumnLayout />
     </div>
   )
 }

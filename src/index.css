@@ -1,11 +1,9 @@
-:root {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 html, body {
     margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#root, .App {
+    height: 100%;
 }
