@@ -1,24 +1,18 @@
-import React from 'react'
 import MonacoEditor from "@monaco-editor/react";
-import { editor } from "monaco-editor";
-import { OneDark } from './themes/OneDark';
-import KodLayout from 'kod-layout'
+import KodLayout from 'kod-layout';
+import { Dark } from "./themes/Dark";
 
 const KodEditor = () => {
-
     return (
         <KodLayout.Tab className='editor'>
             <MonacoEditor
                 // height={height}
                 language={"javascript"}
                 value={`//Write your code is here`}
-                theme= "vs-dark"
+                theme= "Dark"
                 beforeMount={(monaco) => {
-                    monaco.editor.defineTheme("OneDark", OneDark)
+                    monaco.editor.defineTheme("Dark", Dark)
                 }}
-                // onMount={(editor, monaco) => {
-                //     editorRef.current = editor
-                // }}
             />
         </KodLayout.Tab>
     )
