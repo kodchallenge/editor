@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       {/* <TwoColumnLayout /> */}
-      <KodButton status='primary' size='small'>Yasin Torun</KodButton>
-    </div>
+      <KodButton status='primary'>Yasin Torun</KodButton>
+      </div>
   )
 }
 
