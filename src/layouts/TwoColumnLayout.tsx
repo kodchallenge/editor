@@ -1,11 +1,12 @@
 import KodEditor from '@/components/editor/KodEditor'
+import Header from '@/components/header/Header'
 import ProblemDescription from '@/components/problem/description/ProblemDescription'
 import KodLayout from 'kod-layout'
 
 const TwoColumnLayout = () => {
     return (
         <KodLayout.Base>
-            <KodLayout.Header>Header</KodLayout.Header>
+            <Header />
             <KodLayout.Row>
                 <ProblemDescription />
                 <KodLayout.Column>
