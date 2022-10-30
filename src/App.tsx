@@ -1,15 +1,19 @@
-import { useState } from 'react'
-import TwoColumnLayout from './layouts/TwoColumnLayout'
+import styled from '@emotion/styled'
 import '../node_modules/kod-markdown/dist/style.css'
-import KodButton from './components/UI/button/KodButton'
+import TwoColumnLayout from './layouts/TwoColumnLayout'
+
+const AppRoot = styled.main`
+  background-color: ${props => props.theme.colors['app.background']};
+  color: ${props => props.theme.colors['app.foreground']};
+  height: 100%;
+`
 
 function App() {
 
   return (
-    <div className="App">
-      {/* <TwoColumnLayout /> */}
-      <KodButton status='primary'>Yasin Torun</KodButton>
-      </div>
+    <AppRoot>
+      <TwoColumnLayout />
+    </AppRoot>
   )
 }
 
