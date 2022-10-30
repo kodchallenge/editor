@@ -5,6 +5,6 @@ export const Dark: editor.IStandaloneThemeData = {
     inherit: true,
     rules: [],
     colors: {
-         "editor.background": "#282c34",
+         "editor.background": "#1b1d22",
     },
 }
