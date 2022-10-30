@@ -7,6 +7,7 @@ const ProblemDescription = () => {
         <KodLayout.Tab>
             <div css={css`
                 padding: 10px;
+                margin-bottom: 50px;
             `}>
                 <KodMarkdown fromUrl='/sample.md' theme='dark'/>
             </div>
