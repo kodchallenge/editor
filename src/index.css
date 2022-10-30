@@ -8,8 +8,3 @@ html, body {
 #root {
     height: 100%;
 }
-
-.kl-base .kl-row > .kl-split > * {
-    height: 100% !important;
-    overflow: auto;
-}
