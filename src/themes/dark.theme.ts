@@ -16,7 +16,7 @@ export const DarkTheme: Theme = {
         "editorHeader.active.background": "#d9d9d914",
         "editorHeader.active.foreground": "#f2f2f2",
         "tab.foreground": "#B2BED6",
-        "header.background": "#ffffff05",
+        "header.background": "#ffffff15",
         "header.foreground": "#ffffff",
         "gutter": "#a4b3d136"
     },

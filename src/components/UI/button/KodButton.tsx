@@ -45,7 +45,7 @@ const KodButton: React.FC<KodButtonProps & React.HTMLAttributes<HTMLButtonElemen
         disabled
             {...btnProps}
         css={theme => ({
-            backgroundColor: theme[status ?? "primary"],
+            backgroundColor: theme.colors[status ?? "primary"],
             color: status == "light" ? "#333" : "#f2f2f2",
             borderRadius: rounded ? 20 : 5,
             fontSize: buttonSizes[size ?? "medium"]
