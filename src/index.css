@@ -9,12 +9,6 @@ html, body {
     height: 100%;
 }
 
-#root, .App {
-    display: flex;
-    margin: auto;
-}
-#root {
-}
 .kl-base .kl-row > .kl-split > * {
     height: 100% !important;
     overflow: auto;
