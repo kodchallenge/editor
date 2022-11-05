@@ -11,7 +11,6 @@ const ProblemDescription = () => {
         <KodLayout.Tab id='description-area' css={tabCss}>
             <div css={css`
                 padding: 10px;
-                margin-bottom: 50px;
             `}>
                 <KodMarkdown fromUrl='/sample.md' theme='dark'/>
             </div>

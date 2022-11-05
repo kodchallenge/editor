@@ -86,4 +86,9 @@
         display: flex;
         width: 100%;
     }
+    .kl-row, .kl-column {
+        height: unset !important;
+        flex-grow: 1 !important;
+        overflow: auto !important;
+    }
 }
