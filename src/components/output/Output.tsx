@@ -1,6 +1,8 @@
 import styled from '@emotion/styled'
 import React from 'react'
+import { useState } from 'react'
 import KodButton from '../UI/button/KodButton'
+import { Tabs } from '../UI/Tab'
 
 const Root = styled.section`
     height: 100%;
@@ -23,24 +25,27 @@ const HeaderItem = styled.div`
 
 const Tab = styled.div`
     position: relative;
+    flex-grow: 1;
 `
 const TabItem = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    margin-bottom: 60px;
     overflow-y: auto;
 `
 
 const Output = () => {
+    const [tabValue, setTabValue] = useState<number>(0)
+
+    const handleChange = (value: number) => {
+        setTabValue(value)
+    }
+
     return (
         <Root>
             <Header>
-                <HeaderItem>
-                    <p>Console</p>
-                    <p>Inputs</p>
-                </HeaderItem>
+                <Tabs onChange={handleChange} value={tabValue} names={["Konsol", "Input"]}/>
                 <HeaderItem>
                     <KodButton>Run</KodButton>
                     <KodButton status='success'>Submit</KodButton>
