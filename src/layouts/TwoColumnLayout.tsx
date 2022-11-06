@@ -8,7 +8,7 @@ const TwoColumnLayout = () => {
     return (
         <KodLayout.Base>
             <Header />
-            <KodLayout.Row>
+            <KodLayout.Row minSize={400}>
                 <ProblemDescription />
                 <KodLayout.Column>
                     <KodEditor />
