@@ -13,20 +13,24 @@ background-color: #4B33DF;
 color: white;
 transition: all 0.25s  cubic-bezier(0, 1.18, 0, 1.63);
 position: relative !important;
+overflow: hidden;
 &::after {
     content: "";
     position: absolute;
     inset: 0;
-    width: 100%;
+    left: -100%;
+    width: 0;
     height: 100%;
-    z-index: 1;
     border-radius: 5px;
     background: transparent;
+    transition: all 0.25s cubic-bezier(0.1, 0.82, 0.41, 1.33);
 }
 &:hover {
     box-shadow: 1px 1px 10px 0px #00000050;
     &::after {
         background: #ffffff33;
+        left: 0;
+        width: 100%;
     }
 }
 &:active {

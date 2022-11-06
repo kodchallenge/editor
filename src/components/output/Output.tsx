@@ -9,14 +9,14 @@ const Root = styled.section`
     display: flex;
     flex-direction: column;
     flex: auto;
+    padding: 0px 10px;
 `
 
 const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 98%;
-    margin: auto;
+    width: 100%;
 `
 
 const HeaderItem = styled.div`
