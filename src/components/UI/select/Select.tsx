@@ -11,9 +11,6 @@ const Root = styled.div`
     cursor: pointer;
     user-select: none;
     box-shadow: 0px 0px 10px 0px #25283c61;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     & > i {
         margin-right: 10px;
     }
@@ -52,6 +49,22 @@ const List = styled.ul`
     }
 `
 
+const SelectView = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+const SelectText = styled.span`
+    display: flex;
+    flex-grow: 1;
+    & i {
+        margin-right: 15px;
+        transform: rotate(15deg) scale(0.75);
+        opacity: 0.75;
+    }
+`
+
 export type SelectProps = Omit<React.HTMLAttributes<HTMLDivElement>, "children" | "onChange"> & {
     data: string[]
     onChange(value: string, index: number): void;
@@ -62,27 +75,29 @@ export const Select: React.FC<SelectProps> = ({...props}) => {
     const {data, onChange, value, ...others} = props
     const [open, setOpen] = useState<boolean>(false)
 
-    
-    
+
+
     const handleRootClick = () => {
         setOpen(o => !o)
     }
-    
+
     const handleListItemClick = (val: string, index: number) => {
         onChange(val, index)
     }
-    
+
     const rootRef = useRef<HTMLDivElement | null>(null)
     useClickAway(rootRef, () => {
         setOpen(false)
     })
     return (
         <Root ref={rootRef} onClick={handleRootClick} {...others}>
-            <span>
-                {data[value] ?? ""}
-            </span>
-            <link href='https://css.gg/code-slash.css' rel='stylesheet' />
-            <i className="gg-code-slash" />
+            <SelectView>
+                <link href='https://css.gg/chevron-down.css' rel='stylesheet'></link>
+                <SelectText>
+                    {data[value] ?? ""}
+                </SelectText>
+                <i className="gg-chevron-down"></i>
+            </SelectView>
             {open && (
                 <List>
                     {data.map((item, index) => (
