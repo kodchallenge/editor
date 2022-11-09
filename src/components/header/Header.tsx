@@ -38,7 +38,10 @@ const Header = () => {
         <h3>KodChallenge</h3>
         <Right>
           <Select data={languages} value={language} onChange={handleChangeLanguage} />
-          <span>Settings</span>
+          <div>
+            <link href='https://css.gg/options.css' rel='stylesheet' />
+            <i title='Ayarlar' className="gg-options"></i>
+          </div>
         </Right>
       </HeaderRoot>
     </KodLayout.Header>
