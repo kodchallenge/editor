@@ -11,16 +11,31 @@ cursor: pointer;
 tranform: translateY(0px);
 background-color: #4B33DF;
 color: white;
-transition-duration: 0.25s;
+transition: all 0.25s  cubic-bezier(0, 1.18, 0, 1.63);
+position: relative !important;
+overflow: hidden;
+&::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: transparent;
+    transition: all 0.25s cubic-bezier(0.1, 0.82, 0.41, 1.33);
+}
 &:hover {
     box-shadow: 1px 1px 10px 0px #00000050;
+    &::after {
+        background: #ffffff33;
+        left: 0;
+        width: 100%;
+    }
 }
 &:active {
     box-shadow: 1px 1px 1px 0px #00000050;
-    tranform: translateY(-1px)
-}
-&.primary {
-    background-color: #
+    transform: scale(0.9);
 }
 `
 
@@ -42,7 +57,6 @@ const KodButton: React.FC<KodButtonProps & React.HTMLAttributes<HTMLButtonElemen
 
     return (
         <BaseButton 
-        disabled
             {...btnProps}
         css={theme => ({
             backgroundColor: theme.colors[status ?? "primary"],

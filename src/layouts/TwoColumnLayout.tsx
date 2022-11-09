@@ -8,9 +8,9 @@ const TwoColumnLayout = () => {
     return (
         <KodLayout.Base>
             <Header />
-            <KodLayout.Row>
+            <KodLayout.Row gutterSize={10} minSize={400}>
                 <ProblemDescription />
-                <KodLayout.Column>
+                <KodLayout.Column gutterSize={10}>
                     <KodEditor />
                     <KodLayout.Tab>
                         <Output />
