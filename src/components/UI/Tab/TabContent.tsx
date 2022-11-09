@@ -13,6 +13,8 @@ const Item = styled.div`
     bottom: 0;
     left: 0;
     overflow-y: auto;
+    width: 100%;
+    height: 100%;
 `
 
 export type TabContentProps = React.HTMLAttributes<HTMLSelectElement> & {
